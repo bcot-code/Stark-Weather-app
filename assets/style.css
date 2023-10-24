@@ -1,0 +1,86 @@
+:root {
+  --title: linear-gradient(
+    90deg,
+    rgba(180, 142, 58, 1) 0%,
+    rgba(231, 114, 60, 1) 23%,
+    rgba(253, 29, 29, 0.9500393907563025) 33%,
+    rgba(198, 166, 37, 1) 100%
+  );
+  --font-family: "Playpen Sans", cursive;
+}
+h1 {
+  background: var(--title);
+  color: whitesmoke;
+  border: 3 solid black;
+  padding-left: 5px;
+  margin: auto;
+  font-family: var(--font-family);
+}
+
+h2 {
+  font-size: 18px;
+}
+/* .bd-layout {
+
+} */
+aside {
+  float: right;
+}
+
+aside.sidebar {
+  width: 10%;
+  height: 100vh;
+  float: inline-end;
+}
+ul li a {
+  display: flex;
+  text-decoration: none;
+  font-family: var(--font-family);
+}
+.grid-1 {
+  grid-column: span 1 / span 1;
+}
+li:hover {
+  color: var(--title);
+  background-color: rgb(173, 120, 52);
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+section.Weather-content {
+  width: 73%;
+  height: 100vh;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-left: 200px;
+  padding: 1px 16px;
+  font-family: var(--font-family);
+  height: 1000px;
+  text-align: center;
+}
+
+main {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+footer {
+  clear: both;
+  margin-top: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  padding: 0.6em;
+  background: #f9f9f9;
+  border: 1px solid #e4e4e4;
+  border-radius: 4px;
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  color: #aeb1b5;
+  text-align: center;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  aside.sidebar {
+    width: 20%;
+    overflow: hidden;
+  }
+}
