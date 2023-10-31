@@ -17,9 +17,22 @@
     <!--FONT AWESOME EXTS-->
     <link rel="stylesheet" href="./assets/style.css">
     <title>Stark Weather</title>
+    <style type="text/css">
+        * {
+            cursor: url(https://ani.cursors-4u.net/comics/mic-1/mic6.cur), auto !important;
+        }
+    </style><a href="https://www.cursors-4u.com/cursor/2013/02/21/iron-man-mark-vi.html" target="_blank"
+        title="Iron Man Mark VI"><img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Iron Man Mark VI"
+            style="position:absolute; top: 0px; right: 0px;" /></a>
+
 </head>
 
 <body>
+    <!--  changing cursor  -->
+    <div class="custom-cursor site-wide" style="background-image: url('./assets/imgs/mic6.cur');">
+        <div class="pointer"></div>
+    </div>
+
     <!--HEADER-->
     <header class="text-center container-fluid">
         <h1>Welcome to Stark Weather!</h1>
@@ -40,67 +53,49 @@
 
         <div class="row p-2">
             <form action="" method="post" id="weatherForm">
-                <input type="search" placeholder="Search for a city..." name="cityName" required />
+                <input type="search" placeholder="Search for a city..." name="cityName" required id="cityName" />
                 <br />
-                <button class="m-3 alert alert-info" type="submit" form="weatherForm">Get weather info</button>
+                <button class="m-3 alert alert-info cityInput" form="weatherForm">Get weather info</button>
                 <hr />
             </form>
         </div>
-
+        <ul class="list-group history-list"></ul>
         <!--Main Content Area-->
         <section class="bd-toc mt-4 mb-5 my-md-0 ps-xl-">
-            <h3 style="font-size: 15px"> Time: <span id="now"></span></h3>
-            <p>Current Weather</p>
-            <div id="icon"><img id="wicon" src="" alt=""></div>
+            <h3 style="font-size: 15px; color: white;"> Time: <span id="now"></span></h3>
+            <p style="color:white;">Current Weather</p>
+            <img id="wicon" />
             <div class="Temp" id="Temp"></div>
             <div class="Wind" id="Wind"></div>
             <div class="Humidity" id="Humidity"></div>
         </section>
         <section class="Weather-content">
-            <h3>FIVE DAY WEATHER</h3>
-            <div class="icons">
-                <p class="weather" id="dy-1"></p>
-                <span><img src="dots.png" alt="" class="imgEl" id="img1" /></span>
-                <p id="F"></p>
-                <p id="wind"></p>
-                <p id="Humidity"></p>
-            </div>
-            <div class="icons">
-                <p class="weather" id="dy-2"></p>
-                <span><img src="dots.png" alt="" class="imgEl" id="img2" /></span>
-                <p id="F"></p>
-                <p id="wind"></p>
-                <p id="Humidity"></p>
-            </div>
-            <div class="icons">
-                <p class="weather" id="dy-3"></p>
-                <span><img src="dots.png" alt="" class="imgEl" id="img3" /></span>
-                <p id="F"></p>
-                <p id="wind"></p>
-                <p id="Humidity"></p>
-            </div>
-            <div class="icons">
-                <p class="weather" id="dy-4"></p>
-                <span><img src="dots.png" alt="" class="imgEl" id="img4" /></span>
-                <p id="F"></p>
-                <p id="wind"></p>
-                <p id="Humidity"></p>
-            </div>
-            <div class="icons">
-                <p class="weather" id="dy-5"></p>
-                <span><img src="dots.png" alt="" class="imgEl" id="img5" /></span>
-                <p id="F"></p>
-                <p id="wind"></p>
-                <p id="Humidity"></p>
+            <h3 class="five">FIVE DAY WEATHER</h3>
+            <div class="box" style="padding-left: 25%;">
+                <table>
+                    <tr>
+                        <td><span class="day" data-day="0" height="80" width="70" style="padding-left: 20px;"></span>
+                        </td>
+                        <td><span class="day" data-day="1" height="80" width="80" style="padding-left: 20px;"></span>
+                        </td>
+                        <td><span class="day" data-day="2" height="80" width="80" style="padding-left: 20px;"></span>
+                        </td>
+                        <td><span class="day" data-day="3" height="70" width="70" style="padding-left: 15px;"></span>
+                        </td>
+                        <td><span class="day" data-day="4" height="70" width="70" style="padding-left: 15px;"></span>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </section>
     </main>
     <!--FOOTER-->
     <footer>
-        &copy; 2021 - Stark Weather App
+        &copy; 2021 - Tony Stark Industries
     </footer>
+    <script type='text/javascript' src='config.js'></script>
     <script src="./script.js"></script>
-    <script src="https://kit.fontawesome.com/318c46b4db.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
