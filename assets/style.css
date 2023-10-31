@@ -2,12 +2,54 @@
   --title: linear-gradient(
     90deg,
     rgba(180, 142, 58, 1) 0%,
-    rgba(231, 114, 60, 1) 23%,
-    rgba(253, 29, 29, 0.9500393907563025) 33%,
+    rgb(81, 33, 11) 23%,
+    rgba(89, 25, 25, 0.95) 33%,
     rgba(198, 166, 37, 1) 100%
   );
   --font-family: "Playpen Sans", cursive;
 }
+/*Learn how to create custom cursors by TylerPottsDev/yt-html-custom-cursors*/
+html,
+body {
+  cursor: none;
+}
+body {
+  background-image: url(/assets/imgs/pxfuel.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+.custom-cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.site-wide {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid rgb(255, 200, 0);
+}
+.site-wide .pointer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #f31505;
+  transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
+}
+.site-wide.active .pointer {
+  width: 20px;
+  height: 20px;
+}
+
+/* End of the change of cursor */
+
 h1 {
   background: var(--title);
   color: whitesmoke;
@@ -20,9 +62,6 @@ h1 {
 h2 {
   font-size: 18px;
 }
-/* .bd-layout {
-
-} */
 aside {
   float: right;
 }
@@ -44,7 +83,14 @@ li:hover {
   color: var(--title);
   background-color: rgb(173, 120, 52);
 }
-
+.five {
+  font-size: 45px;
+  line-height: 64px;
+  color: orangered;
+  position: relative;
+  text-shadow: #f31505;
+  padding-right: 35%;
+}
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 section.Weather-content {
   width: 73%;
@@ -82,5 +128,8 @@ footer {
   aside.sidebar {
     width: 20%;
     overflow: hidden;
+  }
+  section.Weather-content {
+    width: 80%;
   }
 }
