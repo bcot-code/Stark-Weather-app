@@ -33,14 +33,15 @@ As an explorer, I want to be able to search for a city so that I can see its cur
 
 The application should have:
 
-- An input field where users can enter their desired city name.
-- Buttons or icons for searching cities.
-- Displaying the city's current temperature in Celsius.
-- Displaying the city's wind speed.
-- Displaying the city's relative humidity.
-- Displaying an appropriate weather icon based on the current weather conditions.
-- Error handling if the entered city is not found.
-- Responsive design for mobile devices.
+GIVEN a weather dashboard with form inputs
+WHEN I search for a city
+THEN I am presented with current and future conditions for that city and that city is added to the search history
+WHEN I view current weather conditions for that city
+THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the the wind speed
+WHEN I view future weather conditions for that city
+THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
+WHEN I click on a city in the search history
+THEN I am again presented with current and future conditions for that city
   ``
 
 ## Technologies Used
