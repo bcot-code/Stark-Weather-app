@@ -19,7 +19,7 @@ function currentCity(e) {
 
   console.log(newName);
   fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${newName},us&units=imperial&appid=50fa4024e3b1d5eac2f51ab18a47e997`
+    `http://api.openweathermap.org/data/2.5/weather?q=${newName},us&units=imperial&appid=0ca1fb01baabe5c40d3aaf952a5640b3`
   )
     .then((response) => {
       return response.json();
@@ -62,7 +62,7 @@ function fiveForecast(city) {
   fetch(
     "https://api.openweathermap.org/data/2.5/forecast?q=" +
       city +
-      "&appid=50fa4024e3b1d5eac2f51ab18a47e997"
+      "&appid=0ca1fb01baabe5c40d3aaf952a5640b3"
   )
     .then((response) => {
       return response.json();
