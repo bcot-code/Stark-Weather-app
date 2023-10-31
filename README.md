@@ -42,21 +42,20 @@ WHEN I view future weather conditions for that city
 THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
 WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
-  ``
+``
 
 ## Technologies Used
 
 HTML, CSS, JavaScript, Bootstrap, jQuery, AJAX, JSON, Open Weather Map API
-``
 
 ## Screenshot
 
-![Stark Weather App](https://i.postimg.cc/d0ZJhXtD/starkweatherapp.png "Stark Weather App")
+![Stark Weather App](./assets/imgs/Screen%20Shot%202023-10-31%20at%2012.08.15%20AM.png "Stark Weather App")
 ``
 
 ## Deployment
 
---- process of...
+[https://bcot-code.github.io/Stark-Weather-app/]
 
 ## GitHub
 
