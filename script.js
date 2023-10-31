@@ -1,5 +1,4 @@
 // Current Weather in Austin TX
-const weatherApiKey = "50fa4024e3b1d5eac2f51ab18a47e997";
 const cityInputEl = document.querySelector(".cityInput");
 
 //Current time and date
@@ -14,26 +13,13 @@ now.textContent = `${currentTime.toLocaleString("en-us", {
   currentTime.getMinutes()
 ).padStart(2, "0")}`;
 
-// CORRECT THIS ISSUE FOR SEARCH HISTORY
-// //puts the search underneath the previous city
-// function createRow(text) {
-//   var list = $("<li>").addClass("list-group-item").text(text);
-//   $(".history").append(list);
-// }
-// //listener for the list item
-// $(".history").on("click", "li", function () {
-//   let clickedItemText = $(this).text().trim();
-//   // console.log(clickedItemText);
-//   getWeatherData(clickedItemText);
-// });
-
 function currentCity(e) {
   e.preventDefault();
   let newName = document.querySelector("#cityName").value;
 
   console.log(newName);
   fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${newName},us&units=imperial&appid=${weatherApiKey}`
+    `http://api.openweathermap.org/data/2.5/weather?q=${newName},us&units=imperial&appid=50fa4024e3b1d5eac2f51ab18a47e997`
   )
     .then((response) => {
       return response.json();
@@ -76,8 +62,7 @@ function fiveForecast(city) {
   fetch(
     "https://api.openweathermap.org/data/2.5/forecast?q=" +
       city +
-      "&appid=" +
-      weatherApiKey
+      "&appid=50fa4024e3b1d5eac2f51ab18a47e997"
   )
     .then((response) => {
       return response.json();
